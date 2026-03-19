@@ -4,12 +4,22 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# 🔐 SEGURIDAD (solo desarrollo)
-SECRET_KEY = 'django-insecure-local-dev-key'
+# 🔐 SEGURIDAD
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-dev-key')
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'pagina-invitacion-b-2.onrender.com',
+    '.onrender.com',
+    'localhost',
+    '127.0.0.1',
+
+    'pagina-invitacion-b-2.onrender.com',
+    '.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # 🔹 REDIRECCIONES
@@ -36,18 +46,15 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-# 🔹 MIDDLEWARE (SIN whitenoise ni cors)
+# 🔹 MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -74,12 +81,15 @@ TEMPLATES = [
 ]
 
 
-# 🔹 DATABASE (local)
+# 🔹 DATABASE
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 
