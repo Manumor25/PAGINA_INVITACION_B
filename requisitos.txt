@@ -1,0 +1,12 @@
+asgiref
+autopep8
+crispy-bootstrap4
+Django
+django-crispy-forms
+Pillow
+pycodestyle
+sqlparse
+toml
+tzdata
+coreapi
+django-cors-headers

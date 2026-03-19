@@ -1,0 +1,303 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+<div class="wedding-container">
+
+    <div class="passport-card">
+        <!-- Sello 1 -->
+        <div class="stamp stamp--1" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="6 6" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">SPAIN</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">ESPAÑA</text>
+            </svg>
+        </div>
+        <!-- Sello 2 -->
+        <div class="stamp stamp--2" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="5 7" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">USA</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">NEW YORK</text>
+            </svg>
+        </div>
+        <!-- Sello 3 -->
+        <div class="stamp stamp--3" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="10 5" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">JAPAN</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">TOKYO</text>
+            </svg>
+        </div>
+        <!-- Sello 4 -->
+        <div class="stamp stamp--4" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="4 8" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">UK</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">LONDON</text>
+            </svg>
+        </div>
+        <!-- Sello 5 -->
+        <div class="stamp stamp--5" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="6 6" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">BRAZIL</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">RIO</text>
+            </svg>
+        </div>
+        <!-- Sello 6 -->
+        <div class="stamp stamp--6" aria-hidden="true">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="55" fill="none" stroke="#7a5c2e" stroke-width="5" stroke-dasharray="5 7" />
+                <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="#7a5c2e" font-family="sans-serif" font-weight="700">AUS</text>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="#7a5c2e" font-family="sans-serif">SYDNEY</text>
+            </svg>
+        </div>
+
+        <!-- INICIO CODIGO -->
+        <h1 class="title">🛂 PASAPORTE DE AMOR</h1>
+        <p class="subtitle">✈️ El Viaje de Nuestras Vidas</p>
+        <h2 class="novios">Armando y Jessica</h2>
+
+        <div class="passport-info">
+
+            <p><b>Destino:</b> Matrimonio</p>
+            <p><b>Fecha de emisión:</b> 11 · 10 · 2026</p>
+
+        </div>
+        
+        <div class="section">
+
+            <h3>✈️ Nuestro Viaje</h3>
+            <p>
+            Hace 19 años nuestros caminos se cruzaron para siempre. 
+            Desde entonces hemos recorrido este camino juntos, y muchos de ustedes 
+            han sido parte importante de nuestra historia.
+            </p>
+            <p>
+            Hoy queremos invitarlos a acompañarnos a celebrar el amor 
+            y el inicio de un nuevo viaje sin retorno, hacia la eternidad.
+            </p>
+            <p>
+            Prepárense para celebrar con nosotros esta nueva etapa de nuestra historia.
+            </p>
+
+        </div>
+
+        <!-- VIDEO SECCION -->
+        <div class="video-section">
+            <h3>🎬 Nuestro Amor en Imágenes</h3>
+            <div class="video-container">
+                <video autoplay muted loop width="600" height="338" poster="{% static 'app/img/poster_video.jpg' %}" playsinline>
+                    <source src="https://www.dropbox.com/scl/fi/2jbfjjo4bntwioo56nbtr/090C9A2C-0355-4D5F-AF11-FC9D59C95072.mp4?rlkey=fw0sz0mzy11widcfpe7aink88&st=kmueuk8y&dl=1" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
+        <!-- CONTADOR PARA EL DIA DEL MATRIMONIO -->
+        <div class="countdown-section">
+
+            <div class="event-date">
+
+                <span class="big-date">11</span>
+
+                <div class="date-info">
+                    <span class="month">DE OCTUBRE</span>
+                    <span class="year">DE 2026</span>
+                    <span class="time">A LAS 18.30 HRS</span>
+                </div>
+
+            </div>
+
+            <h3 class="countdown-title">
+            LA CUENTA REGRESIVA <br>
+            COMIENZA EN
+            </h3>
+
+            <div id="countdown">
+
+                <div class="circle">
+                    <span id="days">00</span>
+                    <p>Días</p>
+                </div>
+
+                <div class="circle">
+                    <span id="hours">00</span>
+                    <p>Horas</p>
+                </div>
+
+                <div class="circle">
+                    <span id="minutes">00</span>
+                    <p>Minutos</p>
+                </div>
+
+                <div class="circle">
+                    <span id="seconds">00</span>
+                    <p>Segundos</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section passport">
+
+            <h3>🛫 Sello de destino – Ceremonia</h3>
+
+            <p>📅 <b>Fecha:</b> 11 de octubre de 2026</p>
+            <p>🕒 <b>Hora:</b> 18:30 hrs</p>
+
+            <p>📍 <b>Lugar:</b></p>
+            <p>Centro de Eventos Santa Catalina de Chicureo</p>
+
+        </div>
+
+        <!-- UBICACION DEL MATRIMONIO  -->
+        <div class="section passport">
+
+            <h3>🎉 Sello de destino – Recepción / Fiesta</h3>
+
+            <p>
+            Luego de la ceremonia los invitamos a continuar celebrando juntos.
+            </p>
+
+            <p>📍 <b>Recepción y Fiesta</b></p>
+
+            <p>
+            Centro de Eventos Santa Catalina de Chicureo
+            </p>
+
+            <p>
+            🕒 Inmediatamente después de la ceremonia
+            </p>
+
+            <p>
+            Prepárense para una noche llena de celebración.
+            </p>
+
+        </div>
+
+        <div class="section passport center">
+
+            <h3>📍 Ubicación del evento</h3>
+
+            <p>Presiona el mapa para abrir la navegación en tu dispositivo</p>
+
+            <div id="map" style="height: 400px; border-radius: 10px; margin: 20px 0;"></div>
+
+        </div>
+
+        <div class="section passport">
+
+            <h3>🎟 Información de viaje</h3>
+
+            <p><b>👔 Dress Code</b></p>
+
+            <p>
+            Hombres: Formal <br>
+            Mujeres: Formal elegante
+            </p>
+
+            <p>
+            Sugerimos preferir tonos medios u oscuros para mantener 
+            la armonía del evento.
+            </p>
+
+            <p><b>👶 Relájate</b></p>
+
+            <p>
+            Para que todos puedan relajarse y disfrutar plenamente de la celebración, 
+            este será un evento sin niños.
+            </p>
+
+            <p>
+            Agradecemos mucho su comprensión.
+            </p>
+
+        </div>
+
+        <!-- ALBUM DE FOTOS -->
+        <div class="section passport center">
+
+            <h3>📸 Sello de recuerdos</h3>
+
+            <p>
+            Nos encantará ver el matrimonio también desde su mirada.
+            </p>
+
+            <p>
+            Escanea el QR y comparte las fotos y videos que captures durante la celebración.
+            </p>
+
+            <div class="qr-box">
+
+                <img src="{% static 'app/img/qr_album.png' %}" alt="QR Album" class="qr-img">
+
+            </div>
+
+        </div>
+
+        <!-- LISTA DE RAGALOS -->
+        <div class="section passport center">
+
+            <h3>🎁 Equipaje de regalos</h3>
+
+            <p>
+            Nos encanta viajar y descubrir el mundo juntos.
+            </p>
+
+            <p>
+            Si desean hacernos un regalo, el mejor regalo será ayudarnos 
+            a sumar kilómetros a nuestro próximo viaje.
+            </p>
+
+            <p><b>✈️ Lista de Novios</b></p>
+
+            <a class="button" href="https://milistadenovios.cl/enviar.php?id=31237" target="_blank">
+            www.milistadenovios.cl
+            </a>
+
+        </div>
+
+        <!-- FORMULARIO DE ASISTENCIA -->
+        <div class="section center">
+
+            <h3>🛄 Check-in</h3>
+
+            <p>
+            Por favor confirmar su asistencia.
+            </p>
+
+            <p>
+            📲 Confirmación (Check-in)
+            </p>
+
+            <a class="button check-in" href="https://docs.google.com/forms/d/e/1FAIpQLSdt27hdCQEr-ZyDFQ20AwXZJ-utrGaOn1MPj-O6y6BG_ayAPA/viewform?usp=header">
+            Check-in
+            </a>
+
+        </div>
+
+
+        <div class="section center final-message">
+
+            <p>
+            ✈️ Gracias por ser parte de nuestra historia
+            </p>
+
+            <p>
+            y acompañarnos en el viaje más importante de nuestras vidas.
+            </p>
+
+            <p class="novios-final">
+            Armando & Jessica
+            </p>
+
+        </div>
+
+    </div>
+</div>
+<script src="{% static 'app/js/validador.js' %}"></script>
+
+{% endblock %}
