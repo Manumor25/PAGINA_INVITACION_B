@@ -407,30 +407,31 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 @media (max-width:768px){
 
     .wedding-container{
-        max-width:850px;
-        margin-left: 15%;
+        max-width:100%;
+        margin:0 auto;
+        padding:0 15px;
     }
 
     .title{
         font-family:'Times new roman MT', serif;
-        font-size:42px;
+        font-size:36px;
         color:#0d3b66;
-        margin-left:15%;
-        margin-top:-15%;
+        margin:20px auto;
+        text-align:center;
     }
 
     .subtitle{
         text-align:center;
-        margin-left:20%;
+        margin:0 auto 20px;
     }
 
     .imagen-inicio{
-        width: 700px;
-        height: 700px;
-        margin-left: -60%;
-        margin-top: -60%;
+        width: 100%;
+        height: 300px;
+        margin:20px auto;
         overflow: hidden;
         display: flex;
+        justify-content:center;
     }
 
     .imagen-inicio img{
@@ -442,87 +443,127 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
     }
 
     .novios{
-        font-style: 'italic', cursive !important;
+        font-family: 'Playfair Display', serif !important;
         text-align: center;
-        font-size: 38px;
+        font-size: 28px;
+        margin:20px auto;
         color: #0d3b66;
         font-weight: 600;
         line-height: 1.1;
-        margin-top: -40%;
-        margin-left: 15%;
     }
 
     .passport-info{
-        padding:20px;
-        margin-top: 0%;
+        padding:15px;
+        margin:20px auto;
+        text-align:center;
     }
 
     .section{
-        margin-top:0px;
-        margin-left:35px;
+        margin:20px auto;
+        padding:0 15px;
     }
 
     p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-}
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+    }
+
     .passport-card{
         padding:20px;
+        margin:0 auto;
     }
 
     .big-date{
-        font-size:70px;
+        font-size:60px;
         height:auto;
+        margin:0 auto;
     }
 
     .event-date{
         flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin:20px auto;
     }
 
     .date-info{
         text-align:center;
+        margin-top:10px;
     }
 
     .button{
         width:100%;
+        max-width:300px;
         text-align:center;
+        margin:20px auto;
+        display:block;
     }
-
-    
-
-    .big-date{
-        font-size:70px;
-    }
-
-    .circle{
-        width:60px;
-        height:60px;
-        min-width:60px;
-    }
-
-    .circle span{font-size:16px;}
-
-    .circle p{font-size:10px;}
-
 
     .section h2{
         border-bottom:2px dashed #0d3b66;
         padding-bottom:8px;
-        margin-top:15%;
+        margin:20px 0;
         font-family:'Playfair Display', serif;
+        text-align:center;
     }
+
     .section h3{
         border-bottom:2px dashed #0d3b66;
         padding-bottom:8px;
-        margin-top:15%;
+        margin:20px 0;
         font-family:'Playfair Display', serif;
+        text-align:center;
     }
 
-    #countdown{gap:8px;}
+    #countdown{
+        gap:8px;
+        justify-content:center;
+        margin:20px auto;
+    }
 
-    .circle{width:45px;height:45px;min-width:45px;}
+    .circle{
+        width:45px;
+        height:45px;
+        min-width:45px;
+        flex-shrink:0;
+    }
 
-    .circle span{font-size:20px;}
+    .circle span{
+        font-size:18px;
+    }
 
-    .circle p{font-size:10px;}
+    .circle p{
+        font-size:9px;
+    }
+
+    .video-section{
+        margin:20px auto;
+        padding:0 15px;
+    }
+
+    .video-container{
+        margin:15px auto;
+    }
+
+    .video-container video{
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+
+    .map-container{
+        margin:20px auto;
+        border:2px dashed #b79b6c;
+    }
+
+    .countdown-section{
+        text-align:center;
+        margin:20px auto;
+        padding:20px 15px;
+    }
+
+    .countdown-title{
+        font-size:18px;
+        margin:20px auto;
+    }
 }
