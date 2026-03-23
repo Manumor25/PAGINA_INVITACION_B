@@ -1,13 +1,25 @@
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin-top: 50px;
+    padding: 0%;
 }
+
 body{
-background:#f4eadc;
-font-family:'Poppins', sans-serif;
-color:#4b3b2b;
+    position: relative;
+    color:#0d3b66;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('/static/app/img/fondo.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+    opacity: 0.6; /* 20% opacidad */
+    pointer-events: none;
+    z-index: -1;
 }
 
 .main-wrapper{
@@ -21,17 +33,12 @@ margin:auto;
 
 .passport-card{
 
-background:white;
-
-padding:50px;
-
-border-radius:12px;
-
-box-shadow:0 15px 40px rgba(0,0,0,0.1);
-
-border:2px dashed #d8c7a3;
-
-position:relative;
+    background: rgba(255, 255, 255, 0.92);
+    padding:50px;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.1);
+    border:none;
+    position:relative;
 
 }
 
@@ -49,151 +56,71 @@ position:relative;
     height: 100%;
 }
 
-/* Variantes de sello */
-.stamp--1 {
-    top: -30px;
-    left: -30px;
-    transform: rotate(-12deg);
-}
-
-.stamp--2 {
-    top: 45px;
-    right: -40px;
-    transform: rotate(14deg);
-    opacity: 0.75;
-}
-
-.stamp--3 {
-    top: 260px;
-    left: -40px;
-    transform: rotate(-16deg);
-    opacity: 0.65;
-}
-
-.stamp--4 {
-    top: 710px;
-    right: -40px;
-    transform: rotate(10deg);
-    opacity: 0.6;
-}
-
-.stamp--5 {
-    top: 950px;
-    left: -40px;
-    transform: rotate(-12deg);
-    opacity: 0.65;
-}
-
-.stamp--6 {
-    top: 1180px;
-    right: -40px;
-    transform: rotate(8deg);
-    opacity: 0.6;
-}
-
 .title{
-
-font-family:'Playfair Display', serif;
-
-text-align:center;
-
-font-size:42px;
-
-color:#7a5c2e;
-
-margin-bottom:10px;
-
+    font-family:'Times new roman MT', serif;
+    text-align:center;
+    font-size:42px;
+    color:#0d3b66;
+    margin-bottom:10px;
 }
 
 .subtitle{
-
-text-align:center;
-
-margin-bottom:30px;
-
+    text-align:center;
+    margin-bottom:30px;
 }
 
 .novios{
-
-text-align:center;
-
-font-size:28px;
-
-margin-bottom:40px;
-
+    font-family: 'Playfair Display', serif !important;
+    text-align: center;
+    font-size: 38px;
+    margin-top: -80px;
+    color: #0d3b66;
+    font-weight: 600;
+    line-height: 1.1;
 }
-
 .section{
-
-margin-top:35px;
-
+    margin-top:35px;
 }
 
 .section h3{
-
-border-bottom:2px dashed #c8b28a;
-
-padding-bottom:8px;
-
-margin-bottom:15px;
-
-font-family:'Playfair Display', serif;
-
+    border-bottom:2px dashed #0d3b66;
+    padding-bottom:8px;
+    margin-bottom:15px;
+    font-family:'Playfair Display', serif;
 }
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
 }
 .passport{
-
-background:#faf6ef;
-
-padding:20px;
-
-border-radius:10px;
-
-border:2px dashed #b79b6c;
-
+    background: rgba(250, 246, 239, 0.85);
+    padding:20px;
+    border-radius:10px;
+    border:none;
 }
 
 .center{
-
-text-align:center;
-
+    text-align:center;
 }
 
 .button{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:12px 30px;
-
-background:#7a5c2e;
-
-color:white;
-
-border-radius:6px;
-
-text-decoration:none;
-
-transition:0.3s;
-
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#7a5c2e;
+    color:#0d3b66;
+    border-radius:6px;
+    text-decoration:none;
+    transition:0.3s;
 }
 
 .button:hover{
-
-background:#5a421f;
-
-color:white;
-
+    background:#5a421f;
+    color:#0d3b66;
 }
 
 .check-in{
-
-background:#5a421f;
-
+    background:#5a421f;
 }
 
 .check-in:hover{
@@ -254,7 +181,7 @@ margin-bottom:25px;
 
     font-family:'Playfair Display', serif;
 
-    color:#a8843d;
+    color:#0d3b66;
 
     height: 270px;
 
@@ -280,7 +207,7 @@ font-size:20px;
 
 letter-spacing:2px;
 
-color:#a8843d;
+color:#0d3b66;
 
 }
 
@@ -292,7 +219,7 @@ font-size:20px;
 
 letter-spacing:2px;
 
-color:#a8843d;
+color:#0d3b66;
 
 }
 
@@ -302,7 +229,7 @@ display:block;
 
 font-size:20px;
 
-color:#a8843d;
+color:#0d3b66;
 
 margin-top:2px;
 
@@ -320,86 +247,59 @@ margin-bottom:30px;
 
 font-family:'Playfair Display', serif;
 
-color:#7a5c2e;
+color:#0d3b66;
 
 }
 
 /* CONTADOR */
 
 #countdown{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    justify-content:-10px;
+    gap:15px;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding: 0 10px;
 }
 
 /* CIRCULOS */
 
 .circle{
-
-width:110px;
-
-height:110px;
-
+margin-top: 0%;
+width:50px;
+height:50px;
+min-width:50px;
 border-radius:50%;
-
-background:#b5964a;
-
+background:#0d3b66;
 display:flex;
-
 flex-direction:column;
-
 align-items:center;
-
 justify-content:center;
-
-color:white;
-
+color:#faf0ca;
 box-shadow:0 6px 15px rgba(0,0,0,0.15);
-
+text-align:center;
+padding:8px;
 }
 
 .circle span{
 
-font-size:30px;
+font-size:34px;
 
-font-weight:bold;
+font-weight:800;
 
+line-height:1;
+margin-top: 0%;
 }
 
 .circle p{
 
-margin-top:3px;
+margin:3px 0 0;
 
 font-size:14px;
 
-}
-
-/* RESPONSIVE */
-
-@media (max-width:768px){
-
-.big-date{
-
-font-size:70px;
+letter-spacing:0.6px;
 
 }
-
-.circle{
-
-width:90px;
-
-height:90px;
-
-}
-
-}
-
 
 /* NUEVOS ESTILOS VIAJE */
 
@@ -425,17 +325,26 @@ border:2px dashed #b79b6c;
 
 border-radius:10px;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-margin-top:15px;
-
-background:#faf6ef;
-
 }
+
+/* CORTE DE IMAGEN INICIO CUADRADA */
+.imagen-inicio{
+    width: 600px;
+    height: 600px;
+    margin-left: 13%;
+    margin-top: -70px;
+    overflow: hidden;
+    display: flex;
+}
+
+.imagen-inicio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
 
 .final-message{
 
@@ -497,6 +406,66 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
 
 @media (max-width:768px){
 
+    .wedding-container{
+        max-width:850px;
+        margin-left: 15%;
+    }
+
+    .title{
+        font-family:'Times new roman MT', serif;
+        font-size:42px;
+        color:#0d3b66;
+        margin-left:15%;
+        margin-top:-15%;
+    }
+
+    .subtitle{
+        text-align:center;
+        margin-left:20%;
+    }
+
+    .imagen-inicio{
+        width: 700px;
+        height: 700px;
+        margin-left: -60%;
+        margin-top: -60%;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .imagen-inicio img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+    }
+
+    .novios{
+        font-style: 'italic', cursive !important;
+        text-align: center;
+        font-size: 38px;
+        color: #0d3b66;
+        font-weight: 600;
+        line-height: 1.1;
+        margin-top: -40%;
+        margin-left: 15%;
+    }
+
+    .passport-info{
+        padding:20px;
+        margin-top: 0%;
+    }
+
+    .section{
+        margin-top:0px;
+        margin-left:35px;
+    }
+
+    p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
     .passport-card{
         padding:20px;
     }
@@ -518,10 +487,42 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
         width:100%;
         text-align:center;
     }
-}
 
-/* Evita desbordes */
-img, iframe {
-    max-width: 100%;
-    height: auto;
+    
+
+    .big-date{
+        font-size:70px;
+    }
+
+    .circle{
+        width:60px;
+        height:60px;
+        min-width:60px;
+    }
+
+    .circle span{font-size:16px;}
+
+    .circle p{font-size:10px;}
+
+
+    .section h2{
+        border-bottom:2px dashed #0d3b66;
+        padding-bottom:8px;
+        margin-top:15%;
+        font-family:'Playfair Display', serif;
+    }
+    .section h3{
+        border-bottom:2px dashed #0d3b66;
+        padding-bottom:8px;
+        margin-top:15%;
+        font-family:'Playfair Display', serif;
+    }
+
+    #countdown{gap:8px;}
+
+    .circle{width:45px;height:45px;min-width:45px;}
+
+    .circle span{font-size:20px;}
+
+    .circle p{font-size:10px;}
 }

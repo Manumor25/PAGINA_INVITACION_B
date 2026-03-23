@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -7,19 +8,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # 🔐 SEGURIDAD
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-local-dev-key')
 
-DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = [
-    'pagina-invitacion-b-2.onrender.com',
-    '.onrender.com',
-    'localhost',
-    '127.0.0.1',
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', os.environ.get('RENDER_EXTERNAL_HOSTNAME', '')]
+ALLOWED_HOSTS = [host for host in ALLOWED_HOSTS if host]
 
-    'pagina-invitacion-b-2.onrender.com',
-    '.onrender.com',
-    'localhost',
-    '127.0.0.1',
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', ''),
 ]
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 # 🔹 REDIRECCIONES
@@ -36,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'Usuario',
     'django.contrib.humanize',
     'crispy_forms',
     'crispy_bootstrap4',
@@ -82,15 +85,20 @@ TEMPLATES = [
 
 
 # 🔹 DATABASE
-import dj_database_url
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
-}
+if os.environ.get('DATABASE_URL'):
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL'),
+            conn_max_age=600,
+        )
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # 🔹 PASSWORDS
@@ -112,6 +120,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+if not DEBUG:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # 🔹 MEDIA

@@ -28,9 +28,8 @@ from card_games.settings import MEDIA_URL, BASE_DIR
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
+    path('usuario/', include('Usuario.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    # localhost:8000/usuario
-
 ]
 
 if settings.DEBUG:

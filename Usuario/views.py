@@ -15,7 +15,8 @@ class RegistroUsuario(CreateView):
     succes_url = reverse_lazy('home')
     
 class UserList(ListView):
-    model: User
+    model = User
     template_name = 'Usuario/listar_usuario.html'
+    context_object_name = 'users'
 
 # Create your views here.
