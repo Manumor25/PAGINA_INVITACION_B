@@ -244,9 +244,9 @@ color:#0d3b66;
 
 .circle{
 margin-top: 0%;
-width:70px;
-height:70px;
-min-width:70px;
+width:85px;
+height:85px;
+min-width:85px;
 border-radius:50%;
 background:#0d3b66;
 display:flex;
@@ -261,7 +261,7 @@ padding:8px;
 
 .circle span{
 
-font-size:34px;
+font-size:45px;
 
 font-weight:800;
 
@@ -273,7 +273,7 @@ margin-top: 0%;
 
 margin:3px 0 0;
 
-font-size:14px;
+font-size:15px;
 
 letter-spacing:0.6px;
 
@@ -500,18 +500,18 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
     }
 
     .circle{
-        width:70px;
-        height:70px;
-        min-width:70px;
+        width:60px;
+        height:60px;
+        min-width:60px;
         flex-shrink:0;
     }
 
     .circle span{
-        font-size:40px;
+        font-size:28px;
     }
 
     .circle p{
-        font-size:12px;
+        font-size:10px;
     }
 
     .video-section{
