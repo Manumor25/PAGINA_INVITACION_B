@@ -162,17 +162,11 @@ padding:40px 20px;
 /* FECHA GRANDE */
 
 .event-date{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:15px;
-
-margin-bottom:25px;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
 }
 
 .big-date{
@@ -194,45 +188,29 @@ margin-bottom:25px;
 }
 
 .date-info{
-
-text-align:left;
-
+    text-align:left;
 }
 
 .month{
-
-display:block;
-
-font-size:20px;
-
-letter-spacing:2px;
-
-color:#0d3b66;
-
+    display:block;
+    font-size:20px;
+    letter-spacing:2px;
+    color:#0d3b66;
 }
 
 .year{
-
-display:block;
-
-font-size:20px;
-
-letter-spacing:2px;
-
-color:#0d3b66;
-
+    margin-top: 0;
+    display:block;
+    font-size:20px;
+    letter-spacing:2px;
+    color:#0d3b66;
 }
 
 .time{
-
-display:block;
-
-font-size:20px;
-
-color:#0d3b66;
-
-margin-top:2px;
-
+    display:block;
+    font-size:20px;
+    color:#0d3b66;
+    margin-top:2px;
 }
 
 /* TITULO */
@@ -255,10 +233,10 @@ color:#0d3b66;
 
 #countdown{
     display:flex;
-    justify-content:-10px;
-    gap:15px;
-    flex-wrap:nowrap;
-    overflow-x:auto;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    overflow-x:visible;
     padding: 0 10px;
 }
 
@@ -266,9 +244,9 @@ color:#0d3b66;
 
 .circle{
 margin-top: 0%;
-width:50px;
-height:50px;
-min-width:50px;
+width:70px;
+height:70px;
+min-width:70px;
 border-radius:50%;
 background:#0d3b66;
 display:flex;
@@ -480,15 +458,15 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
     }
 
     .event-date{
-        flex-direction:column;
+        flex-direction:row;
         justify-content:center;
         align-items:center;
         margin:20px auto;
     }
 
     .date-info{
-        text-align:center;
-        margin-top:10px;
+        text-align:left;
+        margin-top:0;
     }
 
     .button{
@@ -522,18 +500,18 @@ box-shadow:0 5px 12px rgba(0,0,0,0.15);
     }
 
     .circle{
-        width:45px;
-        height:45px;
-        min-width:45px;
+        width:70px;
+        height:70px;
+        min-width:70px;
         flex-shrink:0;
     }
 
     .circle span{
-        font-size:18px;
+        font-size:40px;
     }
 
     .circle p{
-        font-size:9px;
+        font-size:12px;
     }
 
     .video-section{
